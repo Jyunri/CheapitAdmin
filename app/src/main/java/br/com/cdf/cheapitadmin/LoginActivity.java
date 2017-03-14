@@ -6,6 +6,7 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -27,7 +28,7 @@ public class LoginActivity extends AppCompatActivity {
     EditText etEmail, etPassword;
     Button btLogin;
 
-    String dataBaseURL = "";
+    String dataBaseURL = "https://cheapit.000webhostapp.com/partner_login.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +42,8 @@ public class LoginActivity extends AppCompatActivity {
         btLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Log.d("Email",etEmail.getText().toString());
+                Log.d("Password",etPassword.getText().toString());
                 new Authenticate().execute(etEmail.getText().toString(),etPassword.getText().toString());
             }
         });
@@ -160,7 +163,8 @@ public class LoginActivity extends AppCompatActivity {
 			                /* Here launching another activity when login successful. If you persist login state
 			                use sharedPreferences of Android. and logout button to clear sharedPreferences.
 			                 */
-                startActivity(new Intent(getApplicationContext(), MainActivity.class));	//troca de activity
+                Toast.makeText(LoginActivity.this, "Sucesso", Toast.LENGTH_LONG).show();
+                //startActivity(new Intent(getApplicationContext(), MainActivity.class));	//troca de activity
 
 
             } else if (result.contains("failure")) {
