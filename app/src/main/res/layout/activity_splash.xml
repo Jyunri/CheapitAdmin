@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="15dp"
+    android:fitsSystemWindows="true"
+    android:background="@color/darkblue">
+
+    <ImageView
+        android:id="@+id/ivLogo"
+        android:scaleType="fitCenter"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="200dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/cheapit_logo2"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginBottom="8dp"
+        android:layout_above="@+id/tvDeveloper"
+        android:background="@android:color/darker_gray"/>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvDeveloper"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:text="Desenvolvido por Audience MKT ®"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        />
+
+</RelativeLayout>
