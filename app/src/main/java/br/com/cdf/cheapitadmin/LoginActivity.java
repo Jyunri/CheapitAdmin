@@ -164,7 +164,7 @@ public class LoginActivity extends AppCompatActivity {
 			                use sharedPreferences of Android. and logout button to clear sharedPreferences.
 			                 */
                 Toast.makeText(LoginActivity.this, "Sucesso", Toast.LENGTH_LONG).show();
-                //startActivity(new Intent(getApplicationContext(), MainActivity.class));	//troca de activity
+                startActivity(new Intent(getApplicationContext(), MainActivity.class));	//troca de activity
 
 
             } else if (result.contains("failure")) {
