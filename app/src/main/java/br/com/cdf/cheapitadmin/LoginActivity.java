@@ -77,7 +77,6 @@ public class LoginActivity extends AppCompatActivity {
                 url = new URL(dataBaseURL);
 
             } catch (MalformedURLException e) {
-                // TODO Auto-generated catch block
                 e.printStackTrace();
                 return "exception";
             }
@@ -111,7 +110,6 @@ public class LoginActivity extends AppCompatActivity {
                 conn.connect();
 
             } catch (IOException e1) {
-                // TODO Auto-generated catch block
                 e1.printStackTrace();
                 return "exception";
             }
