@@ -5,5 +5,6 @@ package br.com.cdf.cheapitadmin;
  */
 
 public class DBController {
-    public static String coupons_url = "https://cheapit.000webhostapp.com/page_coupons_ordered_json.php";;
+    public static String coupons_url = "http://cheapit1.tempsite.ws/query/page_coupons_ordered_json.php";
+    public static String update_coupon_url = "http://cheapit1.tempsite.ws/query/update_coupon.php";
 }
